@@ -1,0 +1,175 @@
+
+# =========================================================
+#  .gitignore - Servidor web concurrente (C++ + Lua + HTML)
+# =========================================================
+
+# ---------------------------------------------------------
+#  Visual Studio
+# ---------------------------------------------------------
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.sdf
+*.opensdf
+ipch/
+*.aps
+*.ncb
+
+# Carpetas de salida de Visual Studio
+x64/
+x86/
+Win32/
+ARM64/
+[Dd]ebug/
+[Rr]elease/
+[Rr]el[Ww]ith[Dd]eb[Ii]nfo/
+[Mm]in[Ss]ize[Rr]el/
+
+# ---------------------------------------------------------
+#  CMake (por si compilas con CMake / VS Code / Linux)
+# ---------------------------------------------------------
+[Bb]uild/
+[Bb]uild-*/
+cmake-build-*/
+out/
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+_deps/
+compile_commands.json
+Makefile
+install_manifest.txt
+
+# ---------------------------------------------------------
+#  C / C++ - archivos compilados
+# ---------------------------------------------------------
+*.o
+*.obj
+*.lo
+*.slo
+*.ko
+*.pch
+*.gch
+*.pdb
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.exp
+*.tlog
+*.lastbuildstate
+*.recipe
+*.exe
+*.out
+*.app
+bin/
+obj/
+
+# Librerías generadas por TU proyecto
+# (si usas librerías de terceros precompiladas, NO las ignores:
+#  ponlas en una carpeta como libs/ o third_party/ y añade
+#  excepciones abajo, p. ej.  !libs/**/*.lib )
+*.a
+*.la
+*.lib
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# ---------------------------------------------------------
+#  Depuración / perfilado (útil en proyectos de concurrencia)
+# ---------------------------------------------------------
+core
+core.*
+vgcore.*
+*.dmp
+*.stackdump
+perf.data
+perf.data.old
+callgrind.out.*
+massif.out.*
+*.gcno
+*.gcda
+*.gcov
+tsan_*.log
+asan_*.log
+
+# ---------------------------------------------------------
+#  Lua
+# ---------------------------------------------------------
+# Bytecode compilado
+*.luac
+luac.out
+
+# LuaRocks (gestor de paquetes)
+lua_modules/
+.luarocks/
+*.rock
+*.rockspec.bak
+
+# ---------------------------------------------------------
+#  Web (HTML / CSS / JS)
+# ---------------------------------------------------------
+node_modules/
+.sass-cache/
+*.css.map
+*.js.map
+dist/
+.parcel-cache/
+npm-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------
+#  Servidor: logs, datos en tiempo de ejecución y secretos
+# ---------------------------------------------------------
+*.log
+logs/
+*.pid
+tmp/
+temp/
+uploads/
+
+# Configuración local y credenciales (nunca subir)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+
+# Bases de datos locales de prueba
+*.sqlite
+*.sqlite3
+*.db
+
+# ---------------------------------------------------------
+#  Editores y sistema operativo
+# ---------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+packages/
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------------------------------------------------------
+#  Excepciones: librerías de terceros que SÍ hay que subir
+#  (descomenta y adapta a tu estructura de carpetas)
+# ---------------------------------------------------------
+# !libs/**
+# !third_party/**
+# !lua/lib/*.lib
+# !lua/lib/*.dll

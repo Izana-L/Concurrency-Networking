@@ -1,0 +1,18 @@
+# Normalizar finales de línea automáticamente
+* text=auto
+
+# Archivos de Visual Studio: siempre CRLF
+*.sln     text eol=crlf
+*.vcxproj text eol=crlf
+*.filters text eol=crlf
+
+# Scripts que se ejecutan en Linux: siempre LF
+*.sh      text eol=lf
+
+# Binarios: no tocar
+*.png  binary
+*.jpg  binary
+*.ico  binary
+*.dll  binary
+*.lib  binary
+*.exe  binary

@@ -1,0 +1,9 @@
+namespace networklibrary
+{
+    [default_interface]
+    runtimeclass LuaCoroutineSupport : Windows.UI.Xaml.Controls.Page
+    {
+        LuaCoroutineSupport();
+        Int32 MyProperty;
+    }
+}
